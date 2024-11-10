@@ -1,0 +1,25 @@
+Item: Galil AR | Metallic Squeezer (Field-Tested), Price: $1.09, Float: 0.15133672952651978, Date/Time: 11/3/2024, 11:18:12 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.02967057190835476, Date/Time: 11/4/2024, 11:15:16 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.030040821060538292, Date/Time: 11/4/2024, 11:15:17 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.025410771369934082, Date/Time: 11/4/2024, 11:15:18 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.021047372370958328, Date/Time: 11/4/2024, 11:15:19 AM
+Item: XM1014 | Halftone Shift (Field-Tested), Price: $1.16, Float: 0.19594267010688782, Date/Time: 11/4/2024, 11:16:42 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.030040821060538292, Date/Time: 11/4/2024, 11:16:54 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.025410771369934082, Date/Time: 11/4/2024, 11:16:55 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.021047372370958328, Date/Time: 11/4/2024, 11:16:56 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.70, Float: 0.023015977814793587, Date/Time: 11/4/2024, 11:16:57 AM
+Item: SG 553 | Berry Gel Coat (Field-Tested), Price: $1.06, Float: 0.20686660706996918, Date/Time: 11/4/2024, 11:28:36 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.025410771369934082, Date/Time: 11/4/2024, 11:28:49 AM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.028728149831295013, Date/Time: 11/4/2024, 11:28:50 AM
+Item: Nova | Wurst Hölle (Field-Tested), Price: $1.05, Float: 0.17649559676647186, Date/Time: 11/4/2024, 12:08:15 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.74, Float: 0.01570705696940422, Date/Time: 11/4/2024, 12:17:20 PM
+Item: Glock-18 | Teal Graf (Field-Tested), Price: $1.09, Float: 0.15803182125091553, Date/Time: 11/4/2024, 12:28:38 PM
+Item: Nova | Wurst Hölle (Field-Tested), Price: $1.05, Float: 0.18308332562446594, Date/Time: 11/4/2024, 1:05:35 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.69, Float: 0.010359065607190132, Date/Time: 11/4/2024, 1:05:56 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.74, Float: 0.011434931308031082, Date/Time: 11/4/2024, 1:41:56 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.74, Float: 0.010355914942920208, Date/Time: 11/4/2024, 1:50:30 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.74, Float: 0.010227064602077007, Date/Time: 11/4/2024, 1:52:15 PM
+Item: Glock-18 | Teal Graf (Field-Tested), Price: $1.07, Float: 0.18228070437908173, Date/Time: 11/4/2024, 2:31:02 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.74, Float: 0.01697717234492302, Date/Time: 11/4/2024, 2:55:15 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.74, Float: 0.011075102724134922, Date/Time: 11/4/2024, 3:03:52 PM
+Item: Glock-18 | Teal Graf (Field-Tested), Price: $1.12, Float: 0.1847289651632309, Date/Time: 11/4/2024, 3:23:56 PM

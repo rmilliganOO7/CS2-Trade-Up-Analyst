@@ -1,0 +1,12 @@
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.75, Float: 0.011250421404838562, Date/Time: 11/6/2024, 4:46:45 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.75, Float: 0.016483105719089508, Date/Time: 11/6/2024, 4:46:46 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.77, Float: 0.010915186256170273, Date/Time: 11/6/2024, 4:54:33 PM
+Item: Galil AR | Metallic Squeezer (Field-Tested), Price: $1.12, Float: 0.19735412299633026, Date/Time: 11/6/2024, 5:12:35 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.028115838766098022, Date/Time: 11/7/2024, 1:46:01 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.0256807841360569, Date/Time: 11/7/2024, 1:46:03 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.025555631145834923, Date/Time: 11/7/2024, 1:46:04 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.02323331870138645, Date/Time: 11/7/2024, 1:46:05 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.028115838766098022, Date/Time: 11/7/2024, 1:46:47 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.0256807841360569, Date/Time: 11/7/2024, 1:46:48 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.025555631145834923, Date/Time: 11/7/2024, 1:46:49 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.02323331870138645, Date/Time: 11/7/2024, 1:46:50 PM

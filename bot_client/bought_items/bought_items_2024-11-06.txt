@@ -1,0 +1,8 @@
+Item: Glock-18 | Teal Graf (Field-Tested), Price: $1.12, Float: 0.18817052245140076, Date/Time: 11/6/2024, 1:43:49 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.78, Float: 0.014414485543966293, Date/Time: 11/6/2024, 1:49:14 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.78, Float: 0.01444325316697359, Date/Time: 11/6/2024, 1:49:15 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.78, Float: 0.01444325316697359, Date/Time: 11/6/2024, 1:51:33 PM
+Item: Nova | Wurst Hölle (Field-Tested), Price: $1.10, Float: 0.16988520324230194, Date/Time: 11/6/2024, 2:09:51 PM
+Item: Glock-18 | Teal Graf (Field-Tested), Price: $1.15, Float: 0.19709870219230652, Date/Time: 11/6/2024, 2:12:18 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.75, Float: 0.01695406250655651, Date/Time: 11/6/2024, 3:27:18 PM
+Item: Glock-18 | Teal Graf (Field-Tested), Price: $1.12, Float: 0.1974073201417923, Date/Time: 11/6/2024, 3:58:13 PM

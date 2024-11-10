@@ -1,0 +1,35 @@
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.75, Float: 0.01160893402993679, Date/Time: 11/7/2024, 4:25:02 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.75, Float: 0.016948048025369644, Date/Time: 11/7/2024, 4:25:04 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.0153788011521101, Date/Time: 11/7/2024, 4:27:15 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.014844721183180809, Date/Time: 11/7/2024, 6:15:16 PM
+Item: SG 553 | Anodized Navy (Factory New), Price: $0.74, Float: 0.018015386536717415, Date/Time: 11/7/2024, 9:07:02 PM
+Item: MAC-10 | Pipsqueak (Field-Tested), Price: $1.20, Float: 0.16865286231040955, Date/Time: 11/7/2024, 9:10:21 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.010414153337478638, Date/Time: 11/7/2024, 9:11:00 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.018453950062394142, Date/Time: 11/7/2024, 9:11:02 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.015632985159754753, Date/Time: 11/7/2024, 9:11:03 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.01119404286146164, Date/Time: 11/7/2024, 9:11:05 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.011213614605367184, Date/Time: 11/7/2024, 9:11:07 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.011665665544569492, Date/Time: 11/7/2024, 9:11:09 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.01880628615617752, Date/Time: 11/7/2024, 9:11:11 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.75, Float: 0.009482376277446747, Date/Time: 11/7/2024, 9:18:15 PM
+Item: Galil AR | Metallic Squeezer (Field-Tested), Price: $1.19, Float: 0.18957838416099548, Date/Time: 11/7/2024, 9:35:05 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.012936572544276714, Date/Time: 11/7/2024, 9:35:54 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.013806615956127644, Date/Time: 11/7/2024, 9:35:56 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.010664494708180428, Date/Time: 11/7/2024, 9:35:58 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.015944624319672585, Date/Time: 11/7/2024, 9:36:00 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.013213295489549637, Date/Time: 11/7/2024, 9:36:01 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.011748379096388817, Date/Time: 11/7/2024, 9:36:03 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.015957031399011612, Date/Time: 11/7/2024, 9:36:05 PM
+Item: Galil AR | Metallic Squeezer (Field-Tested), Price: $1.19, Float: 0.17264609038829803, Date/Time: 11/7/2024, 10:02:04 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.016263427212834358, Date/Time: 11/7/2024, 10:02:50 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.015776032581925392, Date/Time: 11/7/2024, 10:02:52 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.016174251213669777, Date/Time: 11/7/2024, 10:02:54 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.01149806473404169, Date/Time: 11/7/2024, 10:02:56 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.014375269412994385, Date/Time: 11/7/2024, 10:02:57 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.018351726233959198, Date/Time: 11/7/2024, 10:02:59 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.018614469096064568, Date/Time: 11/7/2024, 10:03:01 PM
+Item: MP7 | Anodized Navy (Factory New), Price: $0.76, Float: 0.011835234239697456, Date/Time: 11/7/2024, 10:03:03 PM
+Item: MAC-10 | Pipsqueak (Field-Tested), Price: $1.19, Float: 0.18153804540634155, Date/Time: 11/7/2024, 10:17:54 PM
+Item: Galil AR | Metallic Squeezer (Field-Tested), Price: $1.21, Float: 0.1530141532421112, Date/Time: 11/8/2024, 12:22:06 AM
+Item: MAC-10 | Pipsqueak (Field-Tested), Price: $1.19, Float: 0.18950754404067993, Date/Time: 11/8/2024, 12:27:55 AM
+Item: Galil AR | Metallic Squeezer (Field-Tested), Price: $1.23, Float: 0.1603522002696991, Date/Time: 11/8/2024, 1:38:06 AM
