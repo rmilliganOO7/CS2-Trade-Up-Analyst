@@ -6,7 +6,7 @@ import time
 LED_PIN01 = 1
 LED_PIN02 = 2
 
-# State variable to manage ongoing processes
+# Current command state
 current_command = None
 
 def digitalWrite(pin, state):
@@ -24,8 +24,8 @@ def handle_blinking(pin):
         time.sleep(1)
         digitalWrite(pin, 0)  # Turn off LED
         time.sleep(1)
-        # Break if the command changes
-        if current_command != "items available" and current_command != "items unavailable":
+        # Exit loop if command changes
+        if current_command not in ["items available", "items unavailable"]:
             break
 
 def main():
@@ -33,38 +33,37 @@ def main():
     try:
         reset_pins()
         
-        while True:  # Keep listening for commands
-            # Read input from Node.js
-            input_data = sys.stdin.read()
-            data = json.loads(input_data)
-            new_command = data.get("command", "")
+        # Read input from Node.js
+        input_data = sys.stdin.read()
+        data = json.loads(input_data)
+        new_command = data.get("command", "")
 
-            # Stop any ongoing process if the command changes
-            if new_command != current_command:
-                reset_pins()
-                current_command = new_command
-            
-            if new_command == "items available":
-                handle_blinking(LED_PIN01)
+        # Stop any ongoing processes if the command changes
+        if new_command != current_command:
+            reset_pins()
+            current_command = new_command
 
-            elif new_command == "item bought":
-                digitalWrite(LED_PIN01, 1)  # Green light on
-                digitalWrite(LED_PIN02, 0)  # Red light off
-                response = {"status": "green light"}
-                print(json.dumps(response))
+        if new_command == "items available":
+            handle_blinking(LED_PIN01)
 
-            elif new_command == "no item bought":
-                digitalWrite(LED_PIN01, 0)  # Green light off
-                digitalWrite(LED_PIN02, 1)  # Red light on
-                response = {"status": "red light"}
-                print(json.dumps(response))
+        elif new_command == "item bought":
+            digitalWrite(LED_PIN01, 1)  # Green light on
+            digitalWrite(LED_PIN02, 0)  # Red light off
+            response = {"status": "green light"}
+            print(json.dumps(response))
 
-            elif new_command == "items unavailable":
-                handle_blinking(LED_PIN02)
+        elif new_command == "no item bought":
+            digitalWrite(LED_PIN01, 0)  # Green light off
+            digitalWrite(LED_PIN02, 1)  # Red light on
+            response = {"status": "red light"}
+            print(json.dumps(response))
 
-            else:
-                response = {"error": "Unknown command"}
-                print(json.dumps(response))
+        elif new_command == "items unavailable":
+            handle_blinking(LED_PIN02)
+
+        else:
+            response = {"error": "Unknown command"}
+            print(json.dumps(response))
 
     except Exception as e:
         print(json.dumps({"error": str(e)}))
