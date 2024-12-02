@@ -39,19 +39,26 @@ def main():
                     break
 
         elif data["command"] == "item bought":
-            reset_pins()  # Clear any previous states
-            digitalWrite(LED_PIN01, 1)  # Green light on
-            digitalWrite(LED_PIN02, 0)  # Red light off
-            response = {"status": "green light"}
-            print(json.dumps(response))
+            while True:
+                try:
+                    digitalWrite(LED_PIN01, 1)  # Green light on
+                    digitalWrite(LED_PIN02, 0)  # Red light off
+                    response = {"status": "green light"}
+                    print(json.dumps(response))
+                except KeyboardInterrupt:
+                    reset_pins()  # Ensure the LED is off
+                    break
 
         elif data["command"] == "no item bought":
-            reset_pins()  # Clear any previous states
-            digitalWrite(LED_PIN01, 0)  # Green light off
-            digitalWrite(LED_PIN02, 1)  # Red light on
-            response = {"status": "red light"}
-            print(json.dumps(response))
-
+            while True:
+                try:
+                    digitalWrite(LED_PIN01, 0)  # Green light off
+                    digitalWrite(LED_PIN02, 1)  # Red light on
+                    response = {"status": "red light"}
+                    print(json.dumps(response))
+                except KeyboardInterrupt:
+                    reset_pins()  # Ensure the LED is off
+                    break
         elif data["command"] == "items unavailable":
             reset_pins()  # Clear any previous states
             while True:
