@@ -19,9 +19,6 @@ def reset_pins():
 # Read command from Node.js
 def main():
     try:
-        # Reset all pins before starting
-        reset_pins()
-
         # Read input from Node.js
         input_data = sys.stdin.read()
         data = json.loads(input_data)
