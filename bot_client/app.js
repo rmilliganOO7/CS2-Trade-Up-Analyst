@@ -41,7 +41,7 @@ async function processStatus(item_status) {
     } else if (item_status === "no_item_bought") {
       const response = await interactWithPython("no item bought");
       console.log("Response from Python:", response);
-    } else {
+    } else if (item_status === "items_unavailable"){
       const response = await interactWithPython("items unavailable");
       console.log("Response from Python:", response);
     }

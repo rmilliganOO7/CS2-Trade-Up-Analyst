@@ -42,15 +42,11 @@ def main():
             print(json.dumps(response))
 
         elif data["command"] == "items unavailable":
-            while True:
-                try:
-                    digitalWrite(LED_PIN02, 1)  # Turn on LED
-                    time.sleep(1)
-                    digitalWrite(LED_PIN02, 0)  # Turn off LED
-                    time.sleep(1)
-                except KeyboardInterrupt:
-                    digitalWrite(LED_PIN02, 0)  # Turn off LED on interrupt
-                    break
+            response = {"status": "item unavailable"}
+            print(json.dumps(response))
+            digitalWrite(LED_PIN01, 0)  # Green light off
+            digitalWrite(LED_PIN02, 0)
+
 
         else:
             response = {"error": "Unknown command"}
