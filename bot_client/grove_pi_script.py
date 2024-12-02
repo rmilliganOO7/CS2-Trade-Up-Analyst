@@ -1,10 +1,15 @@
-import grovepi
+from grovepi import *
 import sys
 import json
+import time
 
-# Define your LED pin
-LED_PIN = 4  # Example: digital port D4
-grovepi.pinMode(LED_PIN, "OUTPUT")
+# Define your LED pins
+LED_PIN01 = 3  # Digital port D3
+LED_PIN02 = 4  # Digital port D4
+
+# Set pin modes
+pinMode(LED_PIN01, "OUTPUT")
+pinMode(LED_PIN02, "OUTPUT")
 
 # Read command from Node.js
 def main():
@@ -13,17 +18,44 @@ def main():
         input_data = sys.stdin.read()
         data = json.loads(input_data)
 
-        if data["command"] == "on":
-            grovepi.digitalWrite(LED_PIN, 1)  # Turn LED ON
-            response = {"status": "LED turned on"}
-        elif data["command"] == "off":
-            grovepi.digitalWrite(LED_PIN, 0)  # Turn LED OFF
-            response = {"status": "LED turned off"}
+        if data["command"] == "items available":
+            while True:
+                try:
+                    digitalWrite(LED_PIN01, 1)  # Turn on LED
+                    time.sleep(1)
+                    digitalWrite(LED_PIN01, 0)  # Turn off LED
+                    time.sleep(1)
+                except KeyboardInterrupt:
+                    digitalWrite(LED_PIN01, 0)  # Turn off LED on interrupt
+                    break
+
+        elif data["command"] == "item bought":
+            digitalWrite(LED_PIN01, 1)  # Green light on
+            digitalWrite(LED_PIN02, 0)  # Red light off
+            response = {"status": "green light"}
+            print(json.dumps(response))
+
+        elif data["command"] == "no item bought":
+            digitalWrite(LED_PIN01, 0)  # Green light off
+            digitalWrite(LED_PIN02, 1)  # Red light on
+            response = {"status": "red light"}
+            print(json.dumps(response))
+
+        elif data["command"] == "items unavailable":
+            while True:
+                try:
+                    digitalWrite(LED_PIN02, 1)  # Turn on LED
+                    time.sleep(1)
+                    digitalWrite(LED_PIN02, 0)  # Turn off LED
+                    time.sleep(1)
+                except KeyboardInterrupt:
+                    digitalWrite(LED_PIN02, 0)  # Turn off LED on interrupt
+                    break
+
         else:
             response = {"error": "Unknown command"}
+            print(json.dumps(response))
 
-        # Send output back to Node.js
-        print(json.dumps(response))
     except Exception as e:
         print(json.dumps({"error": str(e)}))
 
