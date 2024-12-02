@@ -19,14 +19,15 @@ def reset_pins():
 # Read command from Node.js
 def main():
     try:
+        # Reset all pins before starting
         reset_pins()
+
         # Read input from Node.js
         input_data = sys.stdin.read()
         data = json.loads(input_data)
 
         if data["command"] == "items available":
             reset_pins()  # Clear any previous states
-            response = {"status": "green light"}
             while True:
                 try:
                     digitalWrite(LED_PIN01, 1)  # Turn on LED
@@ -35,30 +36,22 @@ def main():
                     time.sleep(1)
                 except KeyboardInterrupt:
                     reset_pins()  # Ensure the LED is off
-                    print(json.dumps(response))
                     break
 
         elif data["command"] == "item bought":
-            while True:
-                try:
-                    digitalWrite(LED_PIN01, 1)  # Green light on
-                    digitalWrite(LED_PIN02, 0)  # Red light off
-                    response = {"status": "green light"}
-                    print(json.dumps(response))
-                except KeyboardInterrupt:
-                    reset_pins()  # Ensure the LED is off
-                    break
+            reset_pins()  # Clear any previous states
+            digitalWrite(LED_PIN01, 1)  # Green light on
+            digitalWrite(LED_PIN02, 0)  # Red light off
+            response = {"status": "green light"}
+            print(json.dumps(response))
 
         elif data["command"] == "no item bought":
-            while True:
-                try:
-                    digitalWrite(LED_PIN01, 0)  # Green light off
-                    digitalWrite(LED_PIN02, 1)  # Red light on
-                    response = {"status": "red light"}
-                    print(json.dumps(response))
-                except KeyboardInterrupt:
-                    reset_pins()  # Ensure the LED is off
-                    break
+            reset_pins()  # Clear any previous states
+            digitalWrite(LED_PIN01, 0)  # Green light off
+            digitalWrite(LED_PIN02, 1)  # Red light on
+            response = {"status": "red light"}
+            print(json.dumps(response))
+
         elif data["command"] == "items unavailable":
             reset_pins()  # Clear any previous states
             while True:
