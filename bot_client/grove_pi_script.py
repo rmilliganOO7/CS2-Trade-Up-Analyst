@@ -1,29 +1,31 @@
-import time
-from grovepi import *
+import grovepi
+import sys
+import json
 
-# Connect the Grove LED to digital port D4
-led = 4
+# Define your LED pin
+LED_PIN = 4  # Example: digital port D4
+grovepi.pinMode(LED_PIN, "OUTPUT")
 
-pinMode(led,"OUTPUT")
-time.sleep(1)
-
-print ("This example will blink a Grove LED connected to the GrovePi+ on the port D{}.\nIf you're having trouble seeing the LED blink, be sure to check the LED connection and the port number.\nYou may also try reversing the direction of the LED on the sensor.".format(led))
-print (" ")
-print ("Connect the LED to the D{} port !".format(led))
-
-while True:
+# Read command from Node.js
+def main():
     try:
-        #Blink the LED
-        digitalWrite(led,1)		# Send HIGH to switch on LED
-        print ("LED ON!")
-        time.sleep(1)
+        # Read input from Node.js
+        input_data = sys.stdin.read()
+        data = json.loads(input_data)
 
-        digitalWrite(led,0)		# Send LOW to switch off LED
-        print ("LED OFF!")
-        time.sleep(1)
+        if data["command"] == "on":
+            grovepi.digitalWrite(LED_PIN, 1)  # Turn LED ON
+            response = {"status": "LED turned on"}
+        elif data["command"] == "off":
+            grovepi.digitalWrite(LED_PIN, 0)  # Turn LED OFF
+            response = {"status": "LED turned off"}
+        else:
+            response = {"error": "Unknown command"}
 
-    except KeyboardInterrupt:	# Turn LED off before stopping
-        digitalWrite(led,0)
-        break
-    except IOError:				# Print "Error" if communication error encountered
-        print ("Error")
+        # Send output back to Node.js
+        print(json.dumps(response))
+    except Exception as e:
+        print(json.dumps({"error": str(e)}))
+
+if __name__ == "__main__":
+    main()
