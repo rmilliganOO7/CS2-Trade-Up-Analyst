@@ -31,6 +31,7 @@ def main():
                     time.sleep(1)
                     digitalWrite(LED_PIN01, 0)  # Turn off LED
                     time.sleep(1)
+                    digitalWrite(LED_PIN02, 0)
                 except KeyboardInterrupt:
                     reset_pins()  # Ensure the LED is off
                     break
