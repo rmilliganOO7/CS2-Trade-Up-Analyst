@@ -1,70 +1,75 @@
-from grovepi import *
 import sys
 import json
 import time
 
-# Define your LED pins
-LED_PIN01 = 3  # Digital port D3
-LED_PIN02 = 4  # Digital port D4
+# Pin definitions
+LED_PIN01 = 1
+LED_PIN02 = 2
 
-# Set pin modes
-pinMode(LED_PIN01, "OUTPUT")
-pinMode(LED_PIN02, "OUTPUT")
+# State variable to manage ongoing processes
+current_command = None
 
-# Read command from Node.js
+def digitalWrite(pin, state):
+    # Mock implementation of digitalWrite
+    print(f"Pin {pin} set to {state}")
+
 def reset_pins():
     digitalWrite(LED_PIN01, 0)  # Turn off LED on PIN01
-    digitalWrite(LED_PIN02, 0) 
+    digitalWrite(LED_PIN02, 0)  # Turn off LED on PIN02
+
+def handle_blinking(pin):
+    global current_command
+    while current_command in ["items available", "items unavailable"]:
+        digitalWrite(pin, 1)  # Turn on LED
+        time.sleep(1)
+        digitalWrite(pin, 0)  # Turn off LED
+        time.sleep(1)
+        # Break if the command changes
+        if current_command != "items available" and current_command != "items unavailable":
+            break
 
 def main():
+    global current_command
     try:
         reset_pins()
-        # Read input from Node.js
-        input_data = sys.stdin.read()
-        data = json.loads(input_data)
+        
+        while True:  # Keep listening for commands
+            # Read input from Node.js
+            input_data = sys.stdin.read()
+            data = json.loads(input_data)
+            new_command = data.get("command", "")
 
-        if data["command"] == "items available":
-            while True:
-                try:
-                    digitalWrite(LED_PIN01, 1)  # Turn on LED
-                    time.sleep(1)
-                    digitalWrite(LED_PIN01, 0)  # Turn off LED
-                    time.sleep(1)
-                except KeyboardInterrupt:
-                    reset_pins()
-                    break
+            # Stop any ongoing process if the command changes
+            if new_command != current_command:
+                reset_pins()
+                current_command = new_command
+            
+            if new_command == "items available":
+                handle_blinking(LED_PIN01)
 
-        elif data["command"] == "item bought":
-            digitalWrite(LED_PIN01, 1)  # Green light on
-            digitalWrite(LED_PIN02, 0)  # Red light off
-            response = {"status": "green light"}
-            print(json.dumps(response))
+            elif new_command == "item bought":
+                digitalWrite(LED_PIN01, 1)  # Green light on
+                digitalWrite(LED_PIN02, 0)  # Red light off
+                response = {"status": "green light"}
+                print(json.dumps(response))
 
-        elif data["command"] == "no item bought":
-            digitalWrite(LED_PIN01, 0)  # Green light off
-            digitalWrite(LED_PIN02, 1)  # Red light on
-            response = {"status": "red light"}
-            print(json.dumps(response))
+            elif new_command == "no item bought":
+                digitalWrite(LED_PIN01, 0)  # Green light off
+                digitalWrite(LED_PIN02, 1)  # Red light on
+                response = {"status": "red light"}
+                print(json.dumps(response))
 
-        elif data["command"] == "items unavailable":
-            while True:
-                try:
-                    digitalWrite(LED_PIN02, 1)  # Turn on LED
-                    time.sleep(1)
-                    digitalWrite(LED_PIN02, 0)  # Turn off LED
-                    time.sleep(1)
-                except KeyboardInterrupt:
-                    digitalWrite(LED_PIN02, 0)  # Turn off LED on interrupt
-                    reset_pins()
-                    break
-           
+            elif new_command == "items unavailable":
+                handle_blinking(LED_PIN02)
 
-        else:
-            response = {"error": "Unknown command"}
-            print(json.dumps(response))
+            else:
+                response = {"error": "Unknown command"}
+                print(json.dumps(response))
 
     except Exception as e:
         print(json.dumps({"error": str(e)}))
+    finally:
+        reset_pins()
 
 if __name__ == "__main__":
     main()
