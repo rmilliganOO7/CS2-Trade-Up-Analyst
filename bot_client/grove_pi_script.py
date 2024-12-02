@@ -12,8 +12,13 @@ pinMode(LED_PIN01, "OUTPUT")
 pinMode(LED_PIN02, "OUTPUT")
 
 # Read command from Node.js
+def reset_pins():
+    digitalWrite(LED_PIN01, 0)  # Turn off LED on PIN01
+    digitalWrite(LED_PIN02, 0) 
+
 def main():
     try:
+        reset_pins()
         # Read input from Node.js
         input_data = sys.stdin.read()
         data = json.loads(input_data)
@@ -26,7 +31,7 @@ def main():
                     digitalWrite(LED_PIN01, 0)  # Turn off LED
                     time.sleep(1)
                 except KeyboardInterrupt:
-                    digitalWrite(LED_PIN01, 0)  # Turn off LED on interrupt
+                    reset_pins()
                     break
 
         elif data["command"] == "item bought":
@@ -42,11 +47,17 @@ def main():
             print(json.dumps(response))
 
         elif data["command"] == "items unavailable":
-            response = {"status": "item unavailable"}
-            print(json.dumps(response))
-            digitalWrite(LED_PIN01, 0)  # Green light off
-            digitalWrite(LED_PIN02, 0)
-
+            while True:
+                try:
+                    digitalWrite(LED_PIN02, 1)  # Turn on LED
+                    time.sleep(1)
+                    digitalWrite(LED_PIN02, 0)  # Turn off LED
+                    time.sleep(1)
+                except KeyboardInterrupt:
+                    digitalWrite(LED_PIN02, 0)  # Turn off LED on interrupt
+                    reset_pins()
+                    break
+           
 
         else:
             response = {"error": "Unknown command"}
