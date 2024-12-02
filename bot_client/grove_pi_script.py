@@ -1,12 +1,16 @@
+from grovepi import *
 import sys
 import json
 import time
 
-# Pin definitions
-LED_PIN01 = 3
-LED_PIN02 = 4
+# Define your LED pins
+LED_PIN01 = 3  # Digital port D3
+LED_PIN02 = 4  # Digital port D4
 
-# Current command state
+# Set pin modes
+pinMode(LED_PIN01, "OUTPUT")
+pinMode(LED_PIN02, "OUTPUT")
+
 current_command = None
 
 def digitalWrite(pin, state):
