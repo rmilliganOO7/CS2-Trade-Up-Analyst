@@ -30,7 +30,7 @@ function interactWithPython(command) {
 }
 
 // Function to process item status
-async function processStatus(item_status) {
+export async function processStatus(item_status) {
   try {
     if (item_status === "items_available") {
       const response = await interactWithPython("items available");

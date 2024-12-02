@@ -9,6 +9,10 @@ const path = require('path');
 const https = require('https');
 const client = new SteamUser();
 
+//GROVEPI function for changing led's(grove_pi_script.py)
+//enter processStatus("items_available") into respective function. 
+//String parameter assigned to specific python commmand in app.js 
+import processStatus from './app.js'
 //Starting declarations for the skins themselves and their specific conditions
 
 const item_data = {
