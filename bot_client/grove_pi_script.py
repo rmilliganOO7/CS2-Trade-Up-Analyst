@@ -3,8 +3,8 @@ import json
 import time
 
 # Pin definitions
-LED_PIN01 = 1
-LED_PIN02 = 2
+LED_PIN01 = 3
+LED_PIN02 = 4
 
 # Current command state
 current_command = None
