@@ -19,21 +19,23 @@ def reset_pins():
 # Read command from Node.js
 def main():
     try:
+        reset_pins()
         # Read input from Node.js
         input_data = sys.stdin.read()
         data = json.loads(input_data)
 
         if data["command"] == "items available":
             reset_pins()  # Clear any previous states
+            response = {"status": "green light"}
             while True:
                 try:
                     digitalWrite(LED_PIN01, 1)  # Turn on LED
                     time.sleep(1)
                     digitalWrite(LED_PIN01, 0)  # Turn off LED
                     time.sleep(1)
-                    digitalWrite(LED_PIN02, 0)
                 except KeyboardInterrupt:
                     reset_pins()  # Ensure the LED is off
+                    print(json.dumps(response))
                     break
 
         elif data["command"] == "item bought":
